@@ -1,0 +1,80 @@
+/* Make sure the page scales well on different devices */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Center the tabs container */
+.tabs {
+  width: 80%;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Style for the tab buttons */
+.tab-links {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2px solid #ccc;
+}
+
+.tab-link {
+  background-color: transparent;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.tab-link:hover {
+  background-color: #f1f1f1;
+}
+
+.tab-link.active {
+  border-bottom: 2px solid #007bff;
+  font-weight: bold;
+  background-color: #f4f4f4;
+}
+
+/* Style for the tab content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.tab-content h2 {
+  margin-top: 0;
+}
+
+/* Make the tab content visible for the first tab by default */
+.tab-content:first-of-type {
+  display: block;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .tabs {
+    width: 95%; /* Make it smaller on tablets */
+  }
+  .tab-links {
+    flex-direction: column; /* Stack the tabs vertically on small screens */
+  }
+  .tab-link {
+    text-align: left;
+    padding: 10px;
+    width: 100%; /* Make tabs fill the width of the container */
+  }
+}
